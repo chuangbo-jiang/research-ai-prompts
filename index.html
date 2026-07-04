@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1d4ed8">
+  <meta name="description" content="从文献检索到审稿回复的28个科研AI高质量提示词模板。整理：江枫读博日记，抖音号24256428。">
+  <meta property="og:title" content="科研 AI 高质量提示词手册">
+  <meta property="og:description" content="28个可复制模板：文献检索、论文精读、数据分析、论文写作与审稿回复。">
+  <meta property="og:type" content="website">
+  <title>科研 AI 高质量提示词手册｜江枫读博日记</title>
+  <style>
+    :root{--ink:#14213d;--muted:#64748b;--blue:#275fcb;--blue-dark:#1746a2;--blue-soft:#eaf1ff;--red:#be342d;--red-soft:#ffe4e0;--gold:#8a6400;--gold-soft:#fff3d7;--paper:#f7f4ed;--card:#fff;--line:#d9e2f0;--shadow:0 18px 55px rgba(20,33,61,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;color:var(--ink);background:var(--paper);font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif;line-height:1.65}button,input{font:inherit}a{color:inherit;text-decoration:none}.brand-bar{position:sticky;top:0;z-index:30;height:58px;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(39,95,203,.14)}.brand-inner{max-width:1180px;height:100%;margin:auto;padding:0 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--blue-dark)}.brand-mark{display:grid;place-items:center;width:32px;height:32px;border:3px solid var(--ink);border-radius:10px;background:#f4c95d;box-shadow:3px 3px 0 var(--ink);font-size:14px}.account{font-size:13px;color:var(--muted);font-weight:700}.account b{color:var(--red)}.hero{padding:74px 22px 48px;background:linear-gradient(150deg,#1746a2 0%,#275fcb 54%,#3d77df 100%);color:#fff;position:relative;overflow:hidden}.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.18);border-radius:50%}.hero:before{width:480px;height:480px;right:-160px;top:-240px}.hero:after{width:260px;height:260px;right:80px;bottom:-190px}.hero-inner{position:relative;z-index:1;max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:end}.eyebrow{display:inline-flex;padding:7px 12px;border:1px solid rgba(255,255,255,.42);border-radius:99px;font-size:13px;font-weight:800;letter-spacing:.08em}h1{font-size:clamp(38px,6vw,68px);line-height:1.08;letter-spacing:-.055em;margin:18px 0 18px}.hero-copy{max-width:680px;font-size:18px;color:rgba(255,255,255,.86)}.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px;max-width:520px}.hero-stats div{padding:15px;border-radius:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16)}.hero-stats b{display:block;font-size:24px}.hero-stats span{font-size:12px;color:rgba(255,255,255,.74)}.hero-card{padding:25px;border:3px solid #0f2143;border-radius:22px;background:#f4c95d;color:var(--ink);box-shadow:10px 10px 0 #0f2143;transform:rotate(1.5deg)}.hero-card strong{display:block;font-size:23px;line-height:1.25}.hero-card p{margin:10px 0 0;font-size:14px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.action-btn{border:2px solid var(--ink);border-radius:12px;padding:10px 15px;background:#fff;color:var(--ink);font-weight:900;box-shadow:4px 4px 0 var(--ink);cursor:pointer}.action-btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}.mobile-toc{display:none;max-width:1180px;margin:18px auto 0;padding:0 16px}.mobile-toc details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 15px;box-shadow:0 8px 24px rgba(20,33,61,.07)}.mobile-toc summary{font-weight:900;cursor:pointer}.layout{max-width:1180px;margin:34px auto 90px;padding:0 22px;display:grid;grid-template-columns:290px minmax(0,1fr);gap:30px}.sidebar{position:sticky;top:82px;align-self:start;max-height:calc(100vh - 105px);overflow:auto;padding:18px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.search{width:100%;padding:11px 13px;border:2px solid #cbd5e1;border-radius:11px;outline:none;background:#f8fafc}.search:focus{border-color:var(--blue);background:#fff}.toc-title{margin:15px 0 7px;font-size:12px;color:var(--muted);font-weight:900;letter-spacing:.12em}.toc-group+ .toc-group{border-top:1px solid #edf1f7;margin-top:9px;padding-top:9px}.toc-chapter{display:block;font-size:14px;font-weight:900;color:var(--blue-dark);padding:5px 3px}.toc-prompts a{display:grid;grid-template-columns:26px 1fr;gap:5px;padding:5px 3px;font-size:12px;color:#5a6577;border-radius:7px}.toc-prompts a:hover{background:var(--blue-soft);color:var(--blue-dark)}.toc-prompts span{color:#97a3b6;font-weight:800}.notice{padding:17px 20px;margin-bottom:24px;border:1px solid #e8cf7c;border-radius:16px;background:var(--gold-soft);color:#5d4600}.notice b{color:var(--gold)}.base-card{padding:22px;margin-bottom:30px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}.base-card h2{margin:0 0 7px;font-size:22px}.base-card p{margin:0 0 14px;color:var(--muted)}.base-card pre{max-height:300px}.chapter{scroll-margin-top:82px;margin:0 0 38px}.chapter-heading{display:flex;align-items:center;gap:14px;margin-bottom:15px}.chapter-heading>span{display:grid;place-items:center;width:52px;height:52px;border:3px solid var(--ink);border-radius:15px;background:#f4c95d;box-shadow:5px 5px 0 var(--ink);font-size:18px;font-weight:900}.chapter-heading h2{margin:0;font-size:28px;line-height:1.15}.chapter-heading p{margin:3px 0 0;font-size:13px;color:var(--muted)}.prompt-list{display:grid;gap:13px}.prompt-card{scroll-margin-top:78px;border:1px solid var(--line);border-radius:17px;background:#fff;box-shadow:0 8px 28px rgba(20,33,61,.06);overflow:hidden}.prompt-card[open]{box-shadow:var(--shadow);border-color:#b7c9e8}.prompt-card summary{list-style:none;display:grid;grid-template-columns:44px 1fr 24px;align-items:center;gap:10px;padding:17px 18px;cursor:pointer;font-weight:900}.prompt-card summary::-webkit-details-marker{display:none}.prompt-num{display:grid;place-items:center;width:39px;height:32px;border-radius:10px;background:var(--blue-soft);color:var(--blue)}.prompt-title{font-size:17px}.chevron{font-size:22px;color:var(--muted);transition:.2s}.prompt-card[open] .chevron{transform:rotate(180deg)}.prompt-body{padding:0 18px 18px}.use-row,.bad-row,.tip{display:grid;grid-template-columns:90px 1fr;gap:12px;padding:10px 12px}.use-row{background:var(--blue-soft);border-radius:12px 12px 0 0}.use-row b{color:var(--blue)}.bad-row{background:var(--red-soft);border-radius:0 0 12px 12px}.bad-row b{color:var(--red)}.prompt-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:17px 0 8px;color:var(--blue)}.copy-btn{border:0;border-radius:9px;padding:8px 11px;background:var(--blue);color:#fff;font-size:13px;font-weight:900;cursor:pointer}pre{margin:0;white-space:pre-wrap;word-break:break-word;padding:17px;border:1px solid #c9d6ea;border-radius:13px;background:#f4f7fb;color:#1c2a40;font-family:inherit;font-size:14px;line-height:1.72}.tip{grid-template-columns:90px 1fr;margin-top:10px;background:var(--gold-soft);border-radius:11px;font-size:13px}.tip b{color:var(--gold)}.source{margin-top:9px;text-align:right;font-size:12px;font-weight:900;color:var(--blue)}.empty{display:none;padding:70px 20px;text-align:center;color:var(--muted)}.back-top{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border:2px solid var(--ink);border-radius:14px;background:#f4c95d;color:var(--ink);font-weight:900;box-shadow:4px 4px 0 var(--ink);cursor:pointer}footer{padding:44px 20px;background:#12213d;color:#fff;text-align:center}footer b{color:#f4c95d}footer p{margin:7px 0;color:rgba(255,255,255,.7);font-size:13px}
+    @media(max-width:880px){.hero{padding-top:46px}.hero-inner{grid-template-columns:1fr}.hero-card{max-width:480px}.mobile-toc{display:block}.layout{grid-template-columns:1fr;margin-top:20px;padding:0 14px}.sidebar{display:none}.brand-inner{padding:0 14px}.account{font-size:11px}.hero-stats{max-width:none}}
+    @media(max-width:540px){.brand{font-size:14px}.brand-mark{width:29px;height:29px}.hero{padding-left:16px;padding-right:16px}.hero-copy{font-size:15px}.hero-stats div{padding:11px}.hero-stats b{font-size:20px}.hero-card{padding:19px}.layout{padding:0 11px}.chapter-heading h2{font-size:23px}.prompt-card summary{padding:14px 12px;grid-template-columns:40px 1fr 20px}.prompt-title{font-size:15px}.prompt-body{padding:0 11px 13px}.use-row,.bad-row,.tip{grid-template-columns:72px 1fr;font-size:13px;gap:7px;padding:9px}pre{font-size:13px;padding:13px}.source{font-size:11px}}
+  </style>
+</head>
+<body>
+  <header class="brand-bar"><div class="brand-inner"><a class="brand" href="#top"><span class="brand-mark">AI</span>科研提示词手册</a><div class="account">江枫读博日记 · 抖音号 <b>24256428</b></div></div></header>
+  <main id="top">
+    <section class="hero"><div class="hero-inner"><div><span class="eyebrow">RESEARCH AI PROMPT GUIDE</span><h1>科研 AI<br>高质量提示词手册</h1><p class="hero-copy">从文献检索、论文精读到数据分析与审稿回复。28 个经过证据边界设计的提示词，点击即可复制。</p><div class="hero-stats"><div><b>28</b><span>完整模板</span></div><div><b>8</b><span>科研场景</span></div><div><b>1键</b><span>复制使用</span></div></div></div><aside class="hero-card"><strong>让 AI 负责整理与检查<br>让研究者负责证据与判断</strong><p>分享时请保留来源：江枫读博日记，抖音号 24256428</p><div class="actions"><button class="action-btn" id="shareBtn" type="button">分享链接</button><a class="action-btn" href="#chapter-01">开始阅读</a></div></aside></div></section>
+    <div class="mobile-toc"><details><summary>打开可点击目录</summary><div class="toc-title">章节与提示词</div><section class="toc-group"><a class="toc-chapter" href="#chapter-01">01 文献检索与真实性核验</a><div class="toc-prompts"><a href="#prompt-01"><span>01</span>把研究问题拆成可检索概念</a><a href="#prompt-02"><span>02</span>生成数据库可直接使用的检索式</a><a href="#prompt-03"><span>03</span>候选文献筛选与书目信息核验</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-02">02 单篇论文精读与证据定位</a><div class="toc-prompts"><a href="#prompt-04"><span>04</span>结构化精读单篇论文</a><a href="#prompt-05"><span>05</span>审计研究方法与可重复性</a><a href="#prompt-06"><span>06</span>建立主张—证据对应表</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-03">03 多篇文献比较与综述</a><div class="toc-prompts"><a href="#prompt-07"><span>07</span>建立可溯源的文献对照矩阵</a><a href="#prompt-08"><span>08</span>分析研究结论为何冲突</a><a href="#prompt-09"><span>09</span>生成有证据链的文献综述段落</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-04">04 研究空白、问题与方案</a><div class="toc-prompts"><a href="#prompt-10"><span>10</span>识别有证据支持的研究空白</a><a href="#prompt-11"><span>11</span>把空白转化为研究问题与假设</a><a href="#prompt-12"><span>12</span>评估选题的新颖性与可行性</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-05">05 数据分析与统计解释</a><div class="toc-prompts"><a href="#prompt-13"><span>13</span>制定分析计划而不是直接跑模型</a><a href="#prompt-14"><span>14</span>审查数据质量、缺失值和异常值</a><a href="#prompt-15"><span>15</span>生成可复现分析代码与验证清单</a><a href="#prompt-16"><span>16</span>克制地解释统计结果</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-06">06 科研图表设计与解读</a><div class="toc-prompts"><a href="#prompt-17"><span>17</span>根据研究问题选择图表</a><a href="#prompt-18"><span>18</span>审查现有科研图表</a><a href="#prompt-19"><span>19</span>把图表结果写成论文叙述</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-07">07 论文结构、写作与语言修改</a><div class="toc-prompts"><a href="#prompt-20"><span>20</span>从证据和主张生成论文大纲</a><a href="#prompt-21"><span>21</span>撰写证据约束的摘要</a><a href="#prompt-22"><span>22</span>在不改变事实的前提下润色</a><a href="#prompt-23"><span>23</span>撰写克制且有解释力的讨论</a><a href="#prompt-24"><span>24</span>学术中英翻译与回译核对</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-08">08 模拟审稿、修稿与回复审稿人</a><div class="toc-prompts"><a href="#prompt-25"><span>25</span>模拟目标期刊的严格审稿</a><a href="#prompt-26"><span>26</span>生成逐点回复审稿人草稿</a><a href="#prompt-27"><span>27</span>修回前一致性与完整性审计</a><a href="#prompt-28"><span>28</span>撰写投稿附信并校准贡献表达</a></div></section></details></div>
+    <div class="layout"><aside class="sidebar"><input class="search" id="search" type="search" placeholder="搜索提示词、场景或关键词" aria-label="搜索提示词"><div class="toc-title">可点击目录</div><section class="toc-group"><a class="toc-chapter" href="#chapter-01">01 文献检索与真实性核验</a><div class="toc-prompts"><a href="#prompt-01"><span>01</span>把研究问题拆成可检索概念</a><a href="#prompt-02"><span>02</span>生成数据库可直接使用的检索式</a><a href="#prompt-03"><span>03</span>候选文献筛选与书目信息核验</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-02">02 单篇论文精读与证据定位</a><div class="toc-prompts"><a href="#prompt-04"><span>04</span>结构化精读单篇论文</a><a href="#prompt-05"><span>05</span>审计研究方法与可重复性</a><a href="#prompt-06"><span>06</span>建立主张—证据对应表</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-03">03 多篇文献比较与综述</a><div class="toc-prompts"><a href="#prompt-07"><span>07</span>建立可溯源的文献对照矩阵</a><a href="#prompt-08"><span>08</span>分析研究结论为何冲突</a><a href="#prompt-09"><span>09</span>生成有证据链的文献综述段落</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-04">04 研究空白、问题与方案</a><div class="toc-prompts"><a href="#prompt-10"><span>10</span>识别有证据支持的研究空白</a><a href="#prompt-11"><span>11</span>把空白转化为研究问题与假设</a><a href="#prompt-12"><span>12</span>评估选题的新颖性与可行性</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-05">05 数据分析与统计解释</a><div class="toc-prompts"><a href="#prompt-13"><span>13</span>制定分析计划而不是直接跑模型</a><a href="#prompt-14"><span>14</span>审查数据质量、缺失值和异常值</a><a href="#prompt-15"><span>15</span>生成可复现分析代码与验证清单</a><a href="#prompt-16"><span>16</span>克制地解释统计结果</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-06">06 科研图表设计与解读</a><div class="toc-prompts"><a href="#prompt-17"><span>17</span>根据研究问题选择图表</a><a href="#prompt-18"><span>18</span>审查现有科研图表</a><a href="#prompt-19"><span>19</span>把图表结果写成论文叙述</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-07">07 论文结构、写作与语言修改</a><div class="toc-prompts"><a href="#prompt-20"><span>20</span>从证据和主张生成论文大纲</a><a href="#prompt-21"><span>21</span>撰写证据约束的摘要</a><a href="#prompt-22"><span>22</span>在不改变事实的前提下润色</a><a href="#prompt-23"><span>23</span>撰写克制且有解释力的讨论</a><a href="#prompt-24"><span>24</span>学术中英翻译与回译核对</a></div></section><section class="toc-group"><a class="toc-chapter" href="#chapter-08">08 模拟审稿、修稿与回复审稿人</a><div class="toc-prompts"><a href="#prompt-25"><span>25</span>模拟目标期刊的严格审稿</a><a href="#prompt-26"><span>26</span>生成逐点回复审稿人草稿</a><a href="#prompt-27"><span>27</span>修回前一致性与完整性审计</a><a href="#prompt-28"><span>28</span>撰写投稿附信并校准贡献表达</a></div></section></aside><article class="content"><div class="notice"><b>使用原则：</b>请先替换【方括号】变量；重要结论必须回到原文、数据或代码核验。禁止用于虚构文献、伪造数据或代写学术成果。</div><section class="base-card"><h2>通用防幻觉底座</h2><p>可放在任何科研任务提示词最前面。</p><div class="prompt-head"><b>通用约束</b><button class="copy-btn" data-target="universal" type="button">复制提示词</button></div><pre id="universal">你是一名严谨的科研助理。请仅依据我提供的材料完成任务，不使用无法核验的信息补足缺口。
+
+研究领域：【填写】
+具体任务：【填写】
+输入材料：【粘贴或上传】
+目标读者/期刊：【填写】
+输出格式：【填写】
+
+通用边界：
+1. 区分原文事实、合理推断和待验证假设。
+2. 所有重要判断标注材料编号、页码、表图或原文位置。
+3. 缺失信息写“未提供/原文未报告”，不得猜测。
+4. 不虚构文献、DOI、数据、分析、引用、期刊政策或审稿意见。
+5. 不改变数值、术语、变量关系和因果强度。
+6. 输出前列出需要研究者确认的关键问题；输出后提供自检清单。</pre><div class="source">整理：江枫读博日记｜抖音号：24256428</div></section><section class="chapter" id="chapter-01">
+          <div class="chapter-heading"><span>01</span><div><h2>文献检索与真实性核验</h2><p>3 条可复制模板</p></div></div>
+          <div class="prompt-list"><details class="prompt-card" id="prompt-01" data-search="把研究问题拆成可检索概念 检索前明确概念边界、同义词和排除词 帮我找一些相关文献 你是一名熟悉【研究领域】的科研信息检索顾问。请把下面的研究问题转换为可执行的检索概念框架。
+
+研究问题：【粘贴研究问题】
+研究对象/情境：【填写】
+核心变量或现象：【填写】
+时间范围：【填写】
+语言范围：【中文/英文/不限】
+
+请完成：
+1. 拆分为3-5个核心概念组，解释每组与研究问题的关系。
+2. 为每组提供中文关键词、英文关键词、常见缩写、近义词、上位词和下位词。
+3. 列出容易造成误检的歧义词及建议排除词。
+4. 给出“高召回率版”和“高精确率版”两组概念组合。
+5. 对无法确定的学科术语标注“需研究者确认”，不得自行定义。
+
+输出为：概念组表格 + 排除词清单 + 检索边界说明。不要虚构论文、作者、期刊或doi。 先确认术语含义，再进入数据库检索；跨学科主题尤其需要检查同名异义词。">
+              <summary><span class="prompt-num">01</span><span class="prompt-title">把研究问题拆成可检索概念</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>检索前明确概念边界、同义词和排除词</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我找一些相关文献</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-01" type="button">复制提示词</button></div>
+                <pre id="text-01">你是一名熟悉【研究领域】的科研信息检索顾问。请把下面的研究问题转换为可执行的检索概念框架。
+
+研究问题：【粘贴研究问题】
+研究对象/情境：【填写】
+核心变量或现象：【填写】
+时间范围：【填写】
+语言范围：【中文/英文/不限】
+
+请完成：
+1. 拆分为3-5个核心概念组，解释每组与研究问题的关系。
+2. 为每组提供中文关键词、英文关键词、常见缩写、近义词、上位词和下位词。
+3. 列出容易造成误检的歧义词及建议排除词。
+4. 给出“高召回率版”和“高精确率版”两组概念组合。
+5. 对无法确定的学科术语标注“需研究者确认”，不得自行定义。
+
+输出为：概念组表格 + 排除词清单 + 检索边界说明。不要虚构论文、作者、期刊或DOI。</pre>
+                <div class="tip"><b>使用提醒</b><span>先确认术语含义，再进入数据库检索；跨学科主题尤其需要检查同名异义词。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-02" data-search="生成数据库可直接使用的检索式 针对不同数据库分别适配字段和语法 给我一个搜索关键词 请基于以下概念框架，为【web of science / scopus / pubmed / google scholar / cnki，按需保留】分别生成可复制的检索式。
+
+概念框架：【粘贴上一条输出】
+目标文献类型：【实证研究/综述/方法论文/不限】
+年份范围：【填写】
+学科限制：【填写】
+
+要求：
+1. 正确使用 and、or、not、引号、截词符、字段标签和括号。
+2. 每个数据库分别给出宽检索式、平衡检索式和精确检索式。
+3. 逐段解释每个语句块的作用，并指出可能遗漏的主题表达。
+4. 给出首次试搜后的迭代规则：结果过多、过少或偏题时分别如何调整。
+5. 不确定数据库语法时明确标注“请按数据库当前帮助文档核对”，不得杜撰字段。
+
+输出顺序：数据库名称 → 完整检索式 → 语句解释 → 调整建议。 数据库语法会更新，正式检索前应在目标数据库中试运行并核对帮助页。">
+              <summary><span class="prompt-num">02</span><span class="prompt-title">生成数据库可直接使用的检索式</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>针对不同数据库分别适配字段和语法</span></div>
+                <div class="bad-row"><b>我不说</b><span>给我一个搜索关键词</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-02" type="button">复制提示词</button></div>
+                <pre id="text-02">请基于以下概念框架，为【Web of Science / Scopus / PubMed / Google Scholar / CNKI，按需保留】分别生成可复制的检索式。
+
+概念框架：【粘贴上一条输出】
+目标文献类型：【实证研究/综述/方法论文/不限】
+年份范围：【填写】
+学科限制：【填写】
+
+要求：
+1. 正确使用 AND、OR、NOT、引号、截词符、字段标签和括号。
+2. 每个数据库分别给出宽检索式、平衡检索式和精确检索式。
+3. 逐段解释每个语句块的作用，并指出可能遗漏的主题表达。
+4. 给出首次试搜后的迭代规则：结果过多、过少或偏题时分别如何调整。
+5. 不确定数据库语法时明确标注“请按数据库当前帮助文档核对”，不得杜撰字段。
+
+输出顺序：数据库名称 → 完整检索式 → 语句解释 → 调整建议。</pre>
+                <div class="tip"><b>使用提醒</b><span>数据库语法会更新，正式检索前应在目标数据库中试运行并核对帮助页。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-03" data-search="候选文献筛选与书目信息核验 区分相关性判断与真实性核验 把这些文献整理一下 你是一名系统性文献筛选助手。请仅依据我提供的题录、摘要和可访问原文完成初筛，不补写缺失信息。
+
+纳入标准：【填写】
+排除标准：【填写】
+候选记录：【按编号粘贴】
+
+对每条记录输出：
+1. 初筛结论：纳入 / 排除 / 待定。
+2. 依据：逐条对应纳入或排除标准，并引用题录、摘要或原文中的可定位信息。
+3. 书目信息：标题、作者、年份、期刊、卷期页、doi或其他永久标识。
+4. 核验状态：已由原文/出版社页面确认，或“仅候选信息，尚未核验”。
+5. 重复记录、同一研究的不同版本及可能的撤稿/更正风险。
+
+严禁根据标题猜测研究内容；严禁补造doi。信息缺失时填写“未提供”。最后给出需要人工复核的优先清单。 ai可以辅助初筛，但纳排决定和最终书目信息应由研究者在权威来源复核。">
+              <summary><span class="prompt-num">03</span><span class="prompt-title">候选文献筛选与书目信息核验</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>区分相关性判断与真实性核验</span></div>
+                <div class="bad-row"><b>我不说</b><span>把这些文献整理一下</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-03" type="button">复制提示词</button></div>
+                <pre id="text-03">你是一名系统性文献筛选助手。请仅依据我提供的题录、摘要和可访问原文完成初筛，不补写缺失信息。
+
+纳入标准：【填写】
+排除标准：【填写】
+候选记录：【按编号粘贴】
+
+对每条记录输出：
+1. 初筛结论：纳入 / 排除 / 待定。
+2. 依据：逐条对应纳入或排除标准，并引用题录、摘要或原文中的可定位信息。
+3. 书目信息：标题、作者、年份、期刊、卷期页、DOI或其他永久标识。
+4. 核验状态：已由原文/出版社页面确认，或“仅候选信息，尚未核验”。
+5. 重复记录、同一研究的不同版本及可能的撤稿/更正风险。
+
+严禁根据标题猜测研究内容；严禁补造DOI。信息缺失时填写“未提供”。最后给出需要人工复核的优先清单。</pre>
+                <div class="tip"><b>使用提醒</b><span>AI可以辅助初筛，但纳排决定和最终书目信息应由研究者在权威来源复核。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details></div>
+        </section><section class="chapter" id="chapter-02">
+          <div class="chapter-heading"><span>02</span><div><h2>单篇论文精读与证据定位</h2><p>3 条可复制模板</p></div></div>
+          <div class="prompt-list"><details class="prompt-card" id="prompt-04" data-search="结构化精读单篇论文 让每项结论都能回到原文 帮我总结这篇论文 请仅依据我提供的论文全文进行结构化精读，不使用外部知识补充，也不把作者的推测写成研究结论。
+
+论文内容：【粘贴全文或上传文件】
+我的研究关注点：【填写】
+
+请提取：研究背景、核心问题、理论框架、研究对象与样本、数据来源、变量或材料、研究设计、分析方法、主要结果、作者主张、贡献、局限和未来研究方向。
+
+证据要求：
+1. 每项内容标注章节、页码、表图编号或可定位原句。
+2. 区分“作者明确报告”“可由数据直接支持”“你的解释”三种层级。
+3. 原文未说明的内容统一写“原文未报告”。
+4. 发现摘要、正文、表格或结论不一致时单独列出。
+
+最后用四句话分别概括：研究问题、方法、核心发现、主要贡献。 把pdf页码与文内印刷页码区分开，引用位置要能被他人复查。">
+              <summary><span class="prompt-num">04</span><span class="prompt-title">结构化精读单篇论文</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>让每项结论都能回到原文</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我总结这篇论文</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-04" type="button">复制提示词</button></div>
+                <pre id="text-04">请仅依据我提供的论文全文进行结构化精读，不使用外部知识补充，也不把作者的推测写成研究结论。
+
+论文内容：【粘贴全文或上传文件】
+我的研究关注点：【填写】
+
+请提取：研究背景、核心问题、理论框架、研究对象与样本、数据来源、变量或材料、研究设计、分析方法、主要结果、作者主张、贡献、局限和未来研究方向。
+
+证据要求：
+1. 每项内容标注章节、页码、表图编号或可定位原句。
+2. 区分“作者明确报告”“可由数据直接支持”“你的解释”三种层级。
+3. 原文未说明的内容统一写“原文未报告”。
+4. 发现摘要、正文、表格或结论不一致时单独列出。
+
+最后用四句话分别概括：研究问题、方法、核心发现、主要贡献。</pre>
+                <div class="tip"><b>使用提醒</b><span>把PDF页码与文内印刷页码区分开，引用位置要能被他人复查。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-05" data-search="审计研究方法与可重复性 按设计、测量、分析链条逐项检查 看看这篇论文的方法有没有问题 你是一名严格但克制的方法学审阅者。请仅依据论文原文评估研究方法，不推测作者未报告的步骤。
+
+论文方法与结果部分：【粘贴内容】
+研究类型：【实验/观察/调查/质性/计算/其他】
+
+请逐项检查：研究设计与问题是否匹配；样本来源、纳排标准和样本量依据；变量定义与测量效度；对照、随机化、盲法或混杂控制；缺失值和异常值处理；统计或质性分析流程；多重比较、稳健性与敏感性分析；代码、数据和材料可获得性。
+
+每项输出：原文位置、已报告做法、潜在风险、风险为何影响结论、需要作者补充的信息、可执行改进建议。使用“充分 / 部分充分 / 信息不足 / 不适用”评级。
+
+不得仅因未报告就断言作者没有实施；应写“原文未报告，无法判断”。 方法审计的重点是证据充分性，而不是替作者猜测实验过程。">
+              <summary><span class="prompt-num">05</span><span class="prompt-title">审计研究方法与可重复性</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>按设计、测量、分析链条逐项检查</span></div>
+                <div class="bad-row"><b>我不说</b><span>看看这篇论文的方法有没有问题</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-05" type="button">复制提示词</button></div>
+                <pre id="text-05">你是一名严格但克制的方法学审阅者。请仅依据论文原文评估研究方法，不推测作者未报告的步骤。
+
+论文方法与结果部分：【粘贴内容】
+研究类型：【实验/观察/调查/质性/计算/其他】
+
+请逐项检查：研究设计与问题是否匹配；样本来源、纳排标准和样本量依据；变量定义与测量效度；对照、随机化、盲法或混杂控制；缺失值和异常值处理；统计或质性分析流程；多重比较、稳健性与敏感性分析；代码、数据和材料可获得性。
+
+每项输出：原文位置、已报告做法、潜在风险、风险为何影响结论、需要作者补充的信息、可执行改进建议。使用“充分 / 部分充分 / 信息不足 / 不适用”评级。
+
+不得仅因未报告就断言作者没有实施；应写“原文未报告，无法判断”。</pre>
+                <div class="tip"><b>使用提醒</b><span>方法审计的重点是证据充分性，而不是替作者猜测实验过程。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-06" data-search="建立主张—证据对应表 检查每个重要主张由什么证据支撑 告诉我这篇论文讲了什么 请为以下论文建立“主张—证据—边界”映射。
+
+论文内容：【粘贴内容】
+
+识别正文中最重要的8-15条主张，并对每条输出：
+1. 主张原文及位置。
+2. 支撑它的数据、分析、图表或引用文献。
+3. 证据类型：描述性、相关性、因果性、机制性、理论性或推测性。
+4. 支撑强度：直接 / 间接 / 不足，并解释理由。
+5. 合理结论边界：适用对象、情境、时间和测量范围。
+6. 是否存在过度概括、因果语言过强、结果与讨论不一致或未呈现反例。
+
+不要把统计显著等同于实际重要，不要把相关关系改写成因果关系。最后列出最需要人工复核的3条主张。 这条提示词适合写文献笔记、审稿准备和讨论部分的证据校准。">
+              <summary><span class="prompt-num">06</span><span class="prompt-title">建立主张—证据对应表</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>检查每个重要主张由什么证据支撑</span></div>
+                <div class="bad-row"><b>我不说</b><span>告诉我这篇论文讲了什么</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-06" type="button">复制提示词</button></div>
+                <pre id="text-06">请为以下论文建立“主张—证据—边界”映射。
+
+论文内容：【粘贴内容】
+
+识别正文中最重要的8-15条主张，并对每条输出：
+1. 主张原文及位置。
+2. 支撑它的数据、分析、图表或引用文献。
+3. 证据类型：描述性、相关性、因果性、机制性、理论性或推测性。
+4. 支撑强度：直接 / 间接 / 不足，并解释理由。
+5. 合理结论边界：适用对象、情境、时间和测量范围。
+6. 是否存在过度概括、因果语言过强、结果与讨论不一致或未呈现反例。
+
+不要把统计显著等同于实际重要，不要把相关关系改写成因果关系。最后列出最需要人工复核的3条主张。</pre>
+                <div class="tip"><b>使用提醒</b><span>这条提示词适合写文献笔记、审稿准备和讨论部分的证据校准。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details></div>
+        </section><section class="chapter" id="chapter-03">
+          <div class="chapter-heading"><span>03</span><div><h2>多篇文献比较与综述</h2><p>3 条可复制模板</p></div></div>
+          <div class="prompt-list"><details class="prompt-card" id="prompt-07" data-search="建立可溯源的文献对照矩阵 固定比较维度，避免混淆样本和结论 帮我比较这些文献 请仅依据以下编号文献建立对照矩阵，不使用外部知识补充。
+
+文献：【按p1、p2、p3……编号粘贴】
+研究主题：【填写】
+
+比较维度：研究问题、理论框架、研究对象与样本、国家或情境、数据来源、研究设计、变量或编码框架、分析方法、主要结果、效应方向、贡献、局限和证据质量。
+
+要求：
+1. 每个单元格标注文献编号和原文位置。
+2. 缺失信息填写“未报告”，不得从其他论文移入。
+3. 术语不同但概念可能相同时，保留原词并单列“概念对应说明”。
+4. 最后总结一致结论、主要分歧、不可直接比较之处，以及差异可能来自样本、情境、测量或方法的哪些方面。
+
+任何因果解释必须说明证据条件；无法判断时写“证据不足”。 先做矩阵再写综述，可显著减少不同研究信息串线。">
+              <summary><span class="prompt-num">07</span><span class="prompt-title">建立可溯源的文献对照矩阵</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>固定比较维度，避免混淆样本和结论</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我比较这些文献</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-07" type="button">复制提示词</button></div>
+                <pre id="text-07">请仅依据以下编号文献建立对照矩阵，不使用外部知识补充。
+
+文献：【按P1、P2、P3……编号粘贴】
+研究主题：【填写】
+
+比较维度：研究问题、理论框架、研究对象与样本、国家或情境、数据来源、研究设计、变量或编码框架、分析方法、主要结果、效应方向、贡献、局限和证据质量。
+
+要求：
+1. 每个单元格标注文献编号和原文位置。
+2. 缺失信息填写“未报告”，不得从其他论文移入。
+3. 术语不同但概念可能相同时，保留原词并单列“概念对应说明”。
+4. 最后总结一致结论、主要分歧、不可直接比较之处，以及差异可能来自样本、情境、测量或方法的哪些方面。
+
+任何因果解释必须说明证据条件；无法判断时写“证据不足”。</pre>
+                <div class="tip"><b>使用提醒</b><span>先做矩阵再写综述，可显著减少不同研究信息串线。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-08" data-search="分析研究结论为何冲突 系统排查异质性来源，而不是强行统一 这些论文结论不一样，解释一下 请分析以下文献之间的结论差异，仅使用我提供的内容。
+
+文献矩阵：【粘贴矩阵】
+需要解释的冲突：【填写】
+
+请依次检查：研究问题是否相同；概念和变量定义是否等价；样本与情境是否不同；数据时间范围；测量工具；研究设计；模型设定；控制变量；统计功效；结果报告方式；偏倚与局限。
+
+对每个可能来源输出：支持文献及位置、它如何改变结果、当前证据强度、可检验的后续分析或研究设计。区分“有原文证据的解释”和“待验证假设”。
+
+不要为了形成统一结论而忽略不一致；若文献不可比，请明确说明不可比的具体原因。 冲突本身可能就是重要发现，但必须先排除定义、样本和方法不一致。">
+              <summary><span class="prompt-num">08</span><span class="prompt-title">分析研究结论为何冲突</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>系统排查异质性来源，而不是强行统一</span></div>
+                <div class="bad-row"><b>我不说</b><span>这些论文结论不一样，解释一下</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-08" type="button">复制提示词</button></div>
+                <pre id="text-08">请分析以下文献之间的结论差异，仅使用我提供的内容。
+
+文献矩阵：【粘贴矩阵】
+需要解释的冲突：【填写】
+
+请依次检查：研究问题是否相同；概念和变量定义是否等价；样本与情境是否不同；数据时间范围；测量工具；研究设计；模型设定；控制变量；统计功效；结果报告方式；偏倚与局限。
+
+对每个可能来源输出：支持文献及位置、它如何改变结果、当前证据强度、可检验的后续分析或研究设计。区分“有原文证据的解释”和“待验证假设”。
+
+不要为了形成统一结论而忽略不一致；若文献不可比，请明确说明不可比的具体原因。</pre>
+                <div class="tip"><b>使用提醒</b><span>冲突本身可能就是重要发现，但必须先排除定义、样本和方法不一致。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-09" data-search="生成有证据链的文献综述段落 按观点组织，而不是逐篇罗列 把这些文献写成综述 你是一名学术综述编辑。请根据以下已核验的文献矩阵撰写【主题】的综述段落。
+
+文献矩阵：【粘贴内容】
+目标章节：【引言/相关工作/理论背景/讨论】
+引用格式：【作者-年份/编号制】
+
+写作要求：
+1. 先提出本段中心判断，再按一致证据、补充证据、反向证据和边界条件组织。
+2. 每个实质性判断后标注文献编号，不得添加矩阵中不存在的文献或事实。
+3. 明确区分共识、争议、证据不足和情境依赖。
+4. 不使用“已有大量研究”等无法量化的套话。
+5. 输出正文后附“句子—支持文献—矩阵字段”核对表。
+
+若证据不足以支持某个总结，应删除或降级措辞，而不是补写。 综述不是摘要拼接；每段应围绕一个可验证判断组织证据。">
+              <summary><span class="prompt-num">09</span><span class="prompt-title">生成有证据链的文献综述段落</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>按观点组织，而不是逐篇罗列</span></div>
+                <div class="bad-row"><b>我不说</b><span>把这些文献写成综述</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-09" type="button">复制提示词</button></div>
+                <pre id="text-09">你是一名学术综述编辑。请根据以下已核验的文献矩阵撰写【主题】的综述段落。
+
+文献矩阵：【粘贴内容】
+目标章节：【引言/相关工作/理论背景/讨论】
+引用格式：【作者-年份/编号制】
+
+写作要求：
+1. 先提出本段中心判断，再按一致证据、补充证据、反向证据和边界条件组织。
+2. 每个实质性判断后标注文献编号，不得添加矩阵中不存在的文献或事实。
+3. 明确区分共识、争议、证据不足和情境依赖。
+4. 不使用“已有大量研究”等无法量化的套话。
+5. 输出正文后附“句子—支持文献—矩阵字段”核对表。
+
+若证据不足以支持某个总结，应删除或降级措辞，而不是补写。</pre>
+                <div class="tip"><b>使用提醒</b><span>综述不是摘要拼接；每段应围绕一个可验证判断组织证据。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details></div>
+        </section><section class="chapter" id="chapter-04">
+          <div class="chapter-heading"><span>04</span><div><h2>研究空白、问题与方案</h2><p>3 条可复制模板</p></div></div>
+          <div class="prompt-list"><details class="prompt-card" id="prompt-10" data-search="识别有证据支持的研究空白 区分真正未解决的问题和单纯研究较少 帮我找一个研究空白 请基于以下文献矩阵识别有证据支持的研究空白，不引入矩阵之外的事实。
+
+文献矩阵：【粘贴内容】
+我的资源与研究范围：【填写】
+
+分别检查：理论解释不足、研究对象缺失、情境边界未知、变量机制未检验、测量或方法局限、纵向证据不足、结论冲突和实践问题未解决。
+
+每个候选空白需给出：支持文献及位置、已知与未知的边界、为什么重要、它是否只是“研究数量少”、可验证的研究问题、最低数据需求、可能的反证、预期贡献和主要风险。
+
+采用“证据充分 / 有一定依据 / 证据不足”评级。证据不足的候选项不得包装成确定空白。 研究空白需要“已知—未知—为什么重要”的完整证据链。">
+              <summary><span class="prompt-num">10</span><span class="prompt-title">识别有证据支持的研究空白</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>区分真正未解决的问题和单纯研究较少</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我找一个研究空白</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-10" type="button">复制提示词</button></div>
+                <pre id="text-10">请基于以下文献矩阵识别有证据支持的研究空白，不引入矩阵之外的事实。
+
+文献矩阵：【粘贴内容】
+我的资源与研究范围：【填写】
+
+分别检查：理论解释不足、研究对象缺失、情境边界未知、变量机制未检验、测量或方法局限、纵向证据不足、结论冲突和实践问题未解决。
+
+每个候选空白需给出：支持文献及位置、已知与未知的边界、为什么重要、它是否只是“研究数量少”、可验证的研究问题、最低数据需求、可能的反证、预期贡献和主要风险。
+
+采用“证据充分 / 有一定依据 / 证据不足”评级。证据不足的候选项不得包装成确定空白。</pre>
+                <div class="tip"><b>使用提醒</b><span>研究空白需要“已知—未知—为什么重要”的完整证据链。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-11" data-search="把空白转化为研究问题与假设 让每个假设具有理论机制和可证伪性 根据这个空白写几个假设 请把以下研究空白转化为可检验的研究问题和假设。
+
+研究空白及证据：【粘贴】
+理论框架：【填写】
+研究对象与情境：【填写】
+可获得数据：【填写】
+
+输出：
+1. 一个总研究问题和2-4个子问题。
+2. 每个假设的自变量、因变量、方向、作用机制、边界条件和潜在反例。
+3. 假设对应的理论依据与文献证据编号。
+4. 操作化建议：变量如何测量、最低设计要求、关键混杂因素。
+5. 哪些内容属于探索性分析，不应事后包装为预注册假设。
+
+假设必须可被数据反驳；若证据只支持研究问题而不足以提出方向性假设，请明确保留为开放问题。 先确定机制和边界，再写方向性假设；不要从预期结果倒推理论。">
+              <summary><span class="prompt-num">11</span><span class="prompt-title">把空白转化为研究问题与假设</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>让每个假设具有理论机制和可证伪性</span></div>
+                <div class="bad-row"><b>我不说</b><span>根据这个空白写几个假设</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-11" type="button">复制提示词</button></div>
+                <pre id="text-11">请把以下研究空白转化为可检验的研究问题和假设。
+
+研究空白及证据：【粘贴】
+理论框架：【填写】
+研究对象与情境：【填写】
+可获得数据：【填写】
+
+输出：
+1. 一个总研究问题和2-4个子问题。
+2. 每个假设的自变量、因变量、方向、作用机制、边界条件和潜在反例。
+3. 假设对应的理论依据与文献证据编号。
+4. 操作化建议：变量如何测量、最低设计要求、关键混杂因素。
+5. 哪些内容属于探索性分析，不应事后包装为预注册假设。
+
+假设必须可被数据反驳；若证据只支持研究问题而不足以提出方向性假设，请明确保留为开放问题。</pre>
+                <div class="tip"><b>使用提醒</b><span>先确定机制和边界，再写方向性假设；不要从预期结果倒推理论。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-12" data-search="评估选题的新颖性与可行性 分开评估贡献潜力、可执行性和证据风险 这个选题能不能发论文 你是一名研究设计顾问。请评估以下选题，但不要预测录用概率。
+
+选题说明：【粘贴】
+文献证据矩阵：【粘贴】
+可用时间、数据、设备、样本与技能：【填写】
+目标成果形式：【论文/学位论文/项目报告】
+
+请从理论贡献、经验贡献、方法贡献、实践价值、问题清晰度、数据可得性、识别策略、测量质量、伦理与隐私、时间成本、失败风险进行评估。
+
+每项输出：当前证据、优势、关键缺口、最低可行方案、增强版方案和停止条件。最后给出“保留 / 缩小范围 / 重构 / 暂缓”的建议及理由，并列出最先验证的3个高风险假设。
+
+不得以“热门”“新颖”替代证据，也不得虚构期刊偏好。 优先验证会让整个项目失效的假设，而不是先写漂亮的研究故事。">
+              <summary><span class="prompt-num">12</span><span class="prompt-title">评估选题的新颖性与可行性</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>分开评估贡献潜力、可执行性和证据风险</span></div>
+                <div class="bad-row"><b>我不说</b><span>这个选题能不能发论文</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-12" type="button">复制提示词</button></div>
+                <pre id="text-12">你是一名研究设计顾问。请评估以下选题，但不要预测录用概率。
+
+选题说明：【粘贴】
+文献证据矩阵：【粘贴】
+可用时间、数据、设备、样本与技能：【填写】
+目标成果形式：【论文/学位论文/项目报告】
+
+请从理论贡献、经验贡献、方法贡献、实践价值、问题清晰度、数据可得性、识别策略、测量质量、伦理与隐私、时间成本、失败风险进行评估。
+
+每项输出：当前证据、优势、关键缺口、最低可行方案、增强版方案和停止条件。最后给出“保留 / 缩小范围 / 重构 / 暂缓”的建议及理由，并列出最先验证的3个高风险假设。
+
+不得以“热门”“新颖”替代证据，也不得虚构期刊偏好。</pre>
+                <div class="tip"><b>使用提醒</b><span>优先验证会让整个项目失效的假设，而不是先写漂亮的研究故事。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details></div>
+        </section><section class="chapter" id="chapter-05">
+          <div class="chapter-heading"><span>05</span><div><h2>数据分析与统计解释</h2><p>4 条可复制模板</p></div></div>
+          <div class="prompt-list"><details class="prompt-card" id="prompt-13" data-search="制定分析计划而不是直接跑模型 先把问题、变量和假设映射到分析步骤 帮我分析这些数据 你是一名严谨的数据分析顾问。请在看到数据前先制定分析计划，不虚构结果。
+
+研究问题与假设：【粘贴】
+研究设计：【填写】
+数据结构与变量字典：【粘贴】
+样本量与抽样方式：【填写】
+
+请输出：分析目标；每个假设对应的因变量、自变量、协变量和统计方法；描述性分析；数据质量检查；模型假设；缺失值与异常值策略；效应量与不确定性报告；多重比较控制；稳健性与敏感性分析；图表计划；可复现输出清单。
+
+对每个方法说明适用条件、当前信息是否满足、替代方法及选择标准。信息不足时先列澄清问题，不得默认数据分布、样本独立性或因果识别成立。 把分析计划锁定在结果之前，可降低事后选择模型和过度解释的风险。">
+              <summary><span class="prompt-num">13</span><span class="prompt-title">制定分析计划而不是直接跑模型</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>先把问题、变量和假设映射到分析步骤</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我分析这些数据</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-13" type="button">复制提示词</button></div>
+                <pre id="text-13">你是一名严谨的数据分析顾问。请在看到数据前先制定分析计划，不虚构结果。
+
+研究问题与假设：【粘贴】
+研究设计：【填写】
+数据结构与变量字典：【粘贴】
+样本量与抽样方式：【填写】
+
+请输出：分析目标；每个假设对应的因变量、自变量、协变量和统计方法；描述性分析；数据质量检查；模型假设；缺失值与异常值策略；效应量与不确定性报告；多重比较控制；稳健性与敏感性分析；图表计划；可复现输出清单。
+
+对每个方法说明适用条件、当前信息是否满足、替代方法及选择标准。信息不足时先列澄清问题，不得默认数据分布、样本独立性或因果识别成立。</pre>
+                <div class="tip"><b>使用提醒</b><span>把分析计划锁定在结果之前，可降低事后选择模型和过度解释的风险。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-14" data-search="审查数据质量、缺失值和异常值 保留决策记录，避免为了显著性清洗 把异常数据清理掉 请依据变量字典和研究设计对数据质量进行审查。未经我确认，不得删除、覆盖或填补原始数据。
+
+变量字典：【粘贴】
+数据摘要或样例：【粘贴】
+预先规定的质量标准：【填写】
+
+检查：类型与取值范围、重复记录、逻辑矛盾、时间顺序、单位与编码、缺失模式、极端值、批次效应和潜在数据泄漏。
+
+对每个问题输出：变量与记录定位、发现规则、可能原因、对分析的影响、建议处理、需要人工确认的证据。分别给出“保留原值”“标记但保留”“按预设规则修正”“排除”的条件。
+
+缺失值处理需说明 mcar/mar/mnar 假设和敏感性分析；异常值不得仅因影响显著性而删除。最后生成可审计的数据处理日志模板。 永远保留原始数据和处理日志；清洗规则应在查看主要结果前确定。">
+              <summary><span class="prompt-num">14</span><span class="prompt-title">审查数据质量、缺失值和异常值</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>保留决策记录，避免为了显著性清洗</span></div>
+                <div class="bad-row"><b>我不说</b><span>把异常数据清理掉</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-14" type="button">复制提示词</button></div>
+                <pre id="text-14">请依据变量字典和研究设计对数据质量进行审查。未经我确认，不得删除、覆盖或填补原始数据。
+
+变量字典：【粘贴】
+数据摘要或样例：【粘贴】
+预先规定的质量标准：【填写】
+
+检查：类型与取值范围、重复记录、逻辑矛盾、时间顺序、单位与编码、缺失模式、极端值、批次效应和潜在数据泄漏。
+
+对每个问题输出：变量与记录定位、发现规则、可能原因、对分析的影响、建议处理、需要人工确认的证据。分别给出“保留原值”“标记但保留”“按预设规则修正”“排除”的条件。
+
+缺失值处理需说明 MCAR/MAR/MNAR 假设和敏感性分析；异常值不得仅因影响显著性而删除。最后生成可审计的数据处理日志模板。</pre>
+                <div class="tip"><b>使用提醒</b><span>永远保留原始数据和处理日志；清洗规则应在查看主要结果前确定。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-15" data-search="生成可复现分析代码与验证清单 要求代码、假设检查和输出说明同时交付 写段代码跑一下 请使用【r/python】根据以下分析计划生成可复现代码。
+
+分析计划：【粘贴】
+数据文件与字段说明：【填写】
+软件包限制与版本环境：【填写】
+
+要求：
+1. 代码分为导入、校验、清洗副本、描述统计、模型、诊断、稳健性分析、可视化和导出。
+2. 不覆盖原始文件；设置固定随机种子；记录包版本和关键参数。
+3. 每一步先检查字段、类型、缺失和样本量，条件不满足时明确报错。
+4. 输出效应量、置信区间、模型诊断和可复核表格，而不仅是p值。
+5. 对无法从字段说明确定的内容使用占位符并列出确认项，不得猜测列名或数据含义。
+
+代码后附：运行顺序、预期输出、常见错误、结果核对清单。 先在数据副本上运行；ai生成的代码必须经过小样本测试和人工审阅。">
+              <summary><span class="prompt-num">15</span><span class="prompt-title">生成可复现分析代码与验证清单</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>要求代码、假设检查和输出说明同时交付</span></div>
+                <div class="bad-row"><b>我不说</b><span>写段代码跑一下</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-15" type="button">复制提示词</button></div>
+                <pre id="text-15">请使用【R/Python】根据以下分析计划生成可复现代码。
+
+分析计划：【粘贴】
+数据文件与字段说明：【填写】
+软件包限制与版本环境：【填写】
+
+要求：
+1. 代码分为导入、校验、清洗副本、描述统计、模型、诊断、稳健性分析、可视化和导出。
+2. 不覆盖原始文件；设置固定随机种子；记录包版本和关键参数。
+3. 每一步先检查字段、类型、缺失和样本量，条件不满足时明确报错。
+4. 输出效应量、置信区间、模型诊断和可复核表格，而不仅是p值。
+5. 对无法从字段说明确定的内容使用占位符并列出确认项，不得猜测列名或数据含义。
+
+代码后附：运行顺序、预期输出、常见错误、结果核对清单。</pre>
+                <div class="tip"><b>使用提醒</b><span>先在数据副本上运行；AI生成的代码必须经过小样本测试和人工审阅。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-16" data-search="克制地解释统计结果 区分统计发现、实质意义和因果边界 这个结果说明了什么 请依据以下研究设计和结果表进行解释，不补造未报告的分析。
+
+研究问题与设计：【粘贴】
+结果表、模型输出或图形：【粘贴】
+变量定义与单位：【粘贴】
+
+对每个主要结果说明：估计方向与大小、单位变化的实际含义、不确定性、统计证据、实际重要性、与假设的关系、模型前提、可能的替代解释和可推广边界。
+
+明确区分描述、相关、预测和因果结论。不要把“不显著”解释为“没有效应”，不要只报告p值，不要忽略置信区间、样本量和多重比较。若模型诊断不充分，先标注结论暂不稳固。
+
+输出三个版本：技术解释、论文结果段、面向非专业读者的一句话解释。 解释必须与研究设计允许的推断强度一致。">
+              <summary><span class="prompt-num">16</span><span class="prompt-title">克制地解释统计结果</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>区分统计发现、实质意义和因果边界</span></div>
+                <div class="bad-row"><b>我不说</b><span>这个结果说明了什么</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-16" type="button">复制提示词</button></div>
+                <pre id="text-16">请依据以下研究设计和结果表进行解释，不补造未报告的分析。
+
+研究问题与设计：【粘贴】
+结果表、模型输出或图形：【粘贴】
+变量定义与单位：【粘贴】
+
+对每个主要结果说明：估计方向与大小、单位变化的实际含义、不确定性、统计证据、实际重要性、与假设的关系、模型前提、可能的替代解释和可推广边界。
+
+明确区分描述、相关、预测和因果结论。不要把“不显著”解释为“没有效应”，不要只报告p值，不要忽略置信区间、样本量和多重比较。若模型诊断不充分，先标注结论暂不稳固。
+
+输出三个版本：技术解释、论文结果段、面向非专业读者的一句话解释。</pre>
+                <div class="tip"><b>使用提醒</b><span>解释必须与研究设计允许的推断强度一致。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details></div>
+        </section><section class="chapter" id="chapter-06">
+          <div class="chapter-heading"><span>06</span><div><h2>科研图表设计与解读</h2><p>3 条可复制模板</p></div></div>
+          <div class="prompt-list"><details class="prompt-card" id="prompt-17" data-search="根据研究问题选择图表 先明确比较关系和读者任务 帮我画个好看的图 你是一名科研可视化顾问。请根据研究问题和数据结构选择图表，而不是先追求装饰效果。
+
+研究结论或要传达的信息：【填写】
+数据字段、类型、单位和样本量：【粘贴】
+分组、时间或层级结构：【填写】
+目标期刊/展示场景：【填写】
+
+请给出首选图表和1-2个备选方案。对每个方案说明：它回答的问题、横纵轴、分组编码、排序、是否显示原始数据、误差或不确定性、颜色方案、注释方式、容易造成的误读及避免方法。
+
+禁止用柱高掩盖分布；禁止无依据截断坐标轴；禁止把标准差、标准误和置信区间混用。最后给出图题、图注应包含的信息清单。 图表设计从“读者需要比较什么”开始，而不是从软件模板开始。">
+              <summary><span class="prompt-num">17</span><span class="prompt-title">根据研究问题选择图表</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>先明确比较关系和读者任务</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我画个好看的图</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-17" type="button">复制提示词</button></div>
+                <pre id="text-17">你是一名科研可视化顾问。请根据研究问题和数据结构选择图表，而不是先追求装饰效果。
+
+研究结论或要传达的信息：【填写】
+数据字段、类型、单位和样本量：【粘贴】
+分组、时间或层级结构：【填写】
+目标期刊/展示场景：【填写】
+
+请给出首选图表和1-2个备选方案。对每个方案说明：它回答的问题、横纵轴、分组编码、排序、是否显示原始数据、误差或不确定性、颜色方案、注释方式、容易造成的误读及避免方法。
+
+禁止用柱高掩盖分布；禁止无依据截断坐标轴；禁止把标准差、标准误和置信区间混用。最后给出图题、图注应包含的信息清单。</pre>
+                <div class="tip"><b>使用提醒</b><span>图表设计从“读者需要比较什么”开始，而不是从软件模板开始。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-18" data-search="审查现有科研图表 同时检查数据表达、统计信息和可读性 这个图怎么样 请审查我提供的科研图表及图注。
+
+图表或其详细描述：【上传/粘贴】
+数据与分析背景：【填写】
+目标读者或期刊：【填写】
+
+从以下方面逐项检查：图形类型是否匹配问题；坐标轴、单位、尺度与基线；分组与颜色可辨性；原始数据和样本量；误差条定义；统计标记；图例与图注完整性；多面板编号与阅读顺序；字体和缩放后可读性；黑白打印与色觉友好性；是否存在视觉夸大。
+
+每个问题给出具体位置、影响、修改优先级和可执行方案。无法从图片确认的数据问题标注“需核对源数据”，不得猜测。 审图时同时查看源数据和绘图代码，避免只修外观而遗漏统计错误。">
+              <summary><span class="prompt-num">18</span><span class="prompt-title">审查现有科研图表</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>同时检查数据表达、统计信息和可读性</span></div>
+                <div class="bad-row"><b>我不说</b><span>这个图怎么样</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-18" type="button">复制提示词</button></div>
+                <pre id="text-18">请审查我提供的科研图表及图注。
+
+图表或其详细描述：【上传/粘贴】
+数据与分析背景：【填写】
+目标读者或期刊：【填写】
+
+从以下方面逐项检查：图形类型是否匹配问题；坐标轴、单位、尺度与基线；分组与颜色可辨性；原始数据和样本量；误差条定义；统计标记；图例与图注完整性；多面板编号与阅读顺序；字体和缩放后可读性；黑白打印与色觉友好性；是否存在视觉夸大。
+
+每个问题给出具体位置、影响、修改优先级和可执行方案。无法从图片确认的数据问题标注“需核对源数据”，不得猜测。</pre>
+                <div class="tip"><b>使用提醒</b><span>审图时同时查看源数据和绘图代码，避免只修外观而遗漏统计错误。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-19" data-search="把图表结果写成论文叙述 只描述图中可支持的发现 根据图写一段结果 请根据以下图表、图注和统计结果撰写论文结果段。
+
+图表信息：【粘贴】
+统计结果：【粘贴】
+研究问题：【填写】
+
+写作顺序：先回答图表对应的研究问题；再报告最重要的模式、效应方向和大小；随后给出不确定性和关键统计量；最后说明必要的组间差异或时间趋势。
+
+要求：引用正确的图号或表号；不逐项复述所有数值；不在结果段解释机制；不把视觉趋势写成统计显著；不把相关写成因果；不使用“明显”“巨大”等无量化依据的词。
+
+输出后附“句子—图表元素—统计证据”核对表，任何无法定位的句子标记为待删除。 结果段负责报告证据，机制解释通常留在讨论部分。">
+              <summary><span class="prompt-num">19</span><span class="prompt-title">把图表结果写成论文叙述</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>只描述图中可支持的发现</span></div>
+                <div class="bad-row"><b>我不说</b><span>根据图写一段结果</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-19" type="button">复制提示词</button></div>
+                <pre id="text-19">请根据以下图表、图注和统计结果撰写论文结果段。
+
+图表信息：【粘贴】
+统计结果：【粘贴】
+研究问题：【填写】
+
+写作顺序：先回答图表对应的研究问题；再报告最重要的模式、效应方向和大小；随后给出不确定性和关键统计量；最后说明必要的组间差异或时间趋势。
+
+要求：引用正确的图号或表号；不逐项复述所有数值；不在结果段解释机制；不把视觉趋势写成统计显著；不把相关写成因果；不使用“明显”“巨大”等无量化依据的词。
+
+输出后附“句子—图表元素—统计证据”核对表，任何无法定位的句子标记为待删除。</pre>
+                <div class="tip"><b>使用提醒</b><span>结果段负责报告证据，机制解释通常留在讨论部分。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details></div>
+        </section><section class="chapter" id="chapter-07">
+          <div class="chapter-heading"><span>07</span><div><h2>论文结构、写作与语言修改</h2><p>5 条可复制模板</p></div></div>
+          <div class="prompt-list"><details class="prompt-card" id="prompt-20" data-search="从证据和主张生成论文大纲 先建立主张—证据—章节逻辑 帮我写一篇论文 你是一名学术写作规划顾问。请根据我提供的研究问题、结果和证据生成论文大纲，不补写不存在的发现。
+
+研究问题与贡献主张：【粘贴】
+方法与主要结果：【粘贴】
+文献矩阵：【粘贴】
+目标文章类型与字数：【填写】
+
+请为摘要、引言、文献背景、方法、结果、讨论和结论分别给出：章节目的、核心问题、段落级中心句、所需证据、图表或引用、与前后章节的逻辑连接。
+
+建立“主张—证据—章节位置”表，指出证据不足、重复论证和可能越界的贡献表述。最后给出优先写作顺序和仍需补齐的材料清单。
+
+不要生成空泛模板句；每个段落必须承担明确论证功能。 先完成论证地图，再扩写句子，能显著减少结构性返工。">
+              <summary><span class="prompt-num">20</span><span class="prompt-title">从证据和主张生成论文大纲</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>先建立主张—证据—章节逻辑</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我写一篇论文</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-20" type="button">复制提示词</button></div>
+                <pre id="text-20">你是一名学术写作规划顾问。请根据我提供的研究问题、结果和证据生成论文大纲，不补写不存在的发现。
+
+研究问题与贡献主张：【粘贴】
+方法与主要结果：【粘贴】
+文献矩阵：【粘贴】
+目标文章类型与字数：【填写】
+
+请为摘要、引言、文献背景、方法、结果、讨论和结论分别给出：章节目的、核心问题、段落级中心句、所需证据、图表或引用、与前后章节的逻辑连接。
+
+建立“主张—证据—章节位置”表，指出证据不足、重复论证和可能越界的贡献表述。最后给出优先写作顺序和仍需补齐的材料清单。
+
+不要生成空泛模板句；每个段落必须承担明确论证功能。</pre>
+                <div class="tip"><b>使用提醒</b><span>先完成论证地图，再扩写句子，能显著减少结构性返工。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-21" data-search="撰写证据约束的摘要 只使用正文已经支持的内容 帮我写一个高水平摘要 请依据以下已完成的论文信息撰写摘要，不添加未报告的数据、结论或意义。
+
+研究背景与问题：【粘贴】
+方法与样本：【粘贴】
+主要结果及关键数值：【粘贴】
+贡献与局限：【粘贴】
+目标期刊字数与结构要求：【填写】
+
+摘要需依次回答：为什么研究、研究什么、如何研究、发现什么、意味着什么。结果部分优先报告效应方向、大小和不确定性；结论措辞不得超过研究设计允许的推断范围。
+
+输出：版本a（结构化）、版本b（单段式）、5个关键词。随后提供“摘要句子—正文证据来源”核对表，并标记任何正文证据不足的表述。 摘要不是宣传文案；最重要的是准确、可核对和不过度推断。">
+              <summary><span class="prompt-num">21</span><span class="prompt-title">撰写证据约束的摘要</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>只使用正文已经支持的内容</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我写一个高水平摘要</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-21" type="button">复制提示词</button></div>
+                <pre id="text-21">请依据以下已完成的论文信息撰写摘要，不添加未报告的数据、结论或意义。
+
+研究背景与问题：【粘贴】
+方法与样本：【粘贴】
+主要结果及关键数值：【粘贴】
+贡献与局限：【粘贴】
+目标期刊字数与结构要求：【填写】
+
+摘要需依次回答：为什么研究、研究什么、如何研究、发现什么、意味着什么。结果部分优先报告效应方向、大小和不确定性；结论措辞不得超过研究设计允许的推断范围。
+
+输出：版本A（结构化）、版本B（单段式）、5个关键词。随后提供“摘要句子—正文证据来源”核对表，并标记任何正文证据不足的表述。</pre>
+                <div class="tip"><b>使用提醒</b><span>摘要不是宣传文案；最重要的是准确、可核对和不过度推断。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-22" data-search="在不改变事实的前提下润色 锁定数据、术语、逻辑和结论，只改语言 请帮我润色这段论文 你是一名熟悉【研究领域】的学术编辑。请润色以下段落。
+
+原文：【粘贴内容】
+目标语言与期刊风格：【填写】
+
+修改边界：不得改变事实、数据、术语、变量关系、因果强度、引用指向和结论；不得添加原文没有的信息。
+
+修改任务：修正语法和标点；删除冗余与套话；改善句间衔接；统一术语与时态；使表达准确、简洁、克制。含义不明、证据不足或逻辑跳跃时只标注问题，不得自行补写。
+
+输出顺序：
+1. 修订稿。
+2. “原句—修改后—原因”关键改动表。
+3. 事实与含义可能发生变化的风险点。
+4. 需要作者确认的问题。 润色后逐项核对数字、否定词、比较对象和因果措辞。">
+              <summary><span class="prompt-num">22</span><span class="prompt-title">在不改变事实的前提下润色</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>锁定数据、术语、逻辑和结论，只改语言</span></div>
+                <div class="bad-row"><b>我不说</b><span>请帮我润色这段论文</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-22" type="button">复制提示词</button></div>
+                <pre id="text-22">你是一名熟悉【研究领域】的学术编辑。请润色以下段落。
+
+原文：【粘贴内容】
+目标语言与期刊风格：【填写】
+
+修改边界：不得改变事实、数据、术语、变量关系、因果强度、引用指向和结论；不得添加原文没有的信息。
+
+修改任务：修正语法和标点；删除冗余与套话；改善句间衔接；统一术语与时态；使表达准确、简洁、克制。含义不明、证据不足或逻辑跳跃时只标注问题，不得自行补写。
+
+输出顺序：
+1. 修订稿。
+2. “原句—修改后—原因”关键改动表。
+3. 事实与含义可能发生变化的风险点。
+4. 需要作者确认的问题。</pre>
+                <div class="tip"><b>使用提醒</b><span>润色后逐项核对数字、否定词、比较对象和因果措辞。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-23" data-search="撰写克制且有解释力的讨论 围绕发现、机制、边界和局限组织 帮我写讨论部分 请依据以下结果和已核验文献撰写讨论部分，不引入未提供的事实或引用。
+
+研究问题与主要结果：【粘贴】
+文献对照矩阵：【粘贴】
+研究设计与局限：【粘贴】
+
+结构要求：先概括核心发现；逐项说明与既有证据一致或不一致之处；提出有文献或数据支持的可能机制；讨论边界条件与替代解释；说明理论、方法或实践贡献；诚实呈现局限；提出与局限直接对应的后续研究。
+
+每个解释标注为“结果直接支持”“文献支持的解释”或“待验证推测”。避免重复结果段、夸大新颖性、把局限写成客套话或提出与本研究无关的未来方向。
+
+输出后附主张—证据核对表。 讨论的价值来自解释证据边界，而不是使用更强烈的形容词。">
+              <summary><span class="prompt-num">23</span><span class="prompt-title">撰写克制且有解释力的讨论</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>围绕发现、机制、边界和局限组织</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我写讨论部分</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-23" type="button">复制提示词</button></div>
+                <pre id="text-23">请依据以下结果和已核验文献撰写讨论部分，不引入未提供的事实或引用。
+
+研究问题与主要结果：【粘贴】
+文献对照矩阵：【粘贴】
+研究设计与局限：【粘贴】
+
+结构要求：先概括核心发现；逐项说明与既有证据一致或不一致之处；提出有文献或数据支持的可能机制；讨论边界条件与替代解释；说明理论、方法或实践贡献；诚实呈现局限；提出与局限直接对应的后续研究。
+
+每个解释标注为“结果直接支持”“文献支持的解释”或“待验证推测”。避免重复结果段、夸大新颖性、把局限写成客套话或提出与本研究无关的未来方向。
+
+输出后附主张—证据核对表。</pre>
+                <div class="tip"><b>使用提醒</b><span>讨论的价值来自解释证据边界，而不是使用更强烈的形容词。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-24" data-search="学术中英翻译与回译核对 先锁定术语与事实，再处理表达 把这段翻译成地道学术英语 你是一名熟悉【研究领域】的双语学术编辑。请将以下内容翻译为【中文/英文】，不得改变事实、数字、变量关系、因果强度和引用指向。
+
+原文：【粘贴内容】
+术语表与固定译法：【粘贴】
+目标期刊或读者：【填写】
+
+要求：
+1. 优先保证含义准确，再优化学术表达和句间衔接。
+2. 保留专业术语、统计符号、缩写、图表编号和引文格式。
+3. 对一词多义、主语不明、逻辑关系不清或可能改变结论强度的内容标注“需作者确认”。
+4. 不把“相关”“关联”“预测”翻译成因果关系，不擅自强化新颖性或确定性。
+
+输出：译文；关键术语对照表；高风险句子的直译、意译与选择理由；将译文回译后的含义差异清单。 翻译后重点核对否定词、比较对象、时态、统计术语和因果动词。">
+              <summary><span class="prompt-num">24</span><span class="prompt-title">学术中英翻译与回译核对</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>先锁定术语与事实，再处理表达</span></div>
+                <div class="bad-row"><b>我不说</b><span>把这段翻译成地道学术英语</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-24" type="button">复制提示词</button></div>
+                <pre id="text-24">你是一名熟悉【研究领域】的双语学术编辑。请将以下内容翻译为【中文/英文】，不得改变事实、数字、变量关系、因果强度和引用指向。
+
+原文：【粘贴内容】
+术语表与固定译法：【粘贴】
+目标期刊或读者：【填写】
+
+要求：
+1. 优先保证含义准确，再优化学术表达和句间衔接。
+2. 保留专业术语、统计符号、缩写、图表编号和引文格式。
+3. 对一词多义、主语不明、逻辑关系不清或可能改变结论强度的内容标注“需作者确认”。
+4. 不把“相关”“关联”“预测”翻译成因果关系，不擅自强化新颖性或确定性。
+
+输出：译文；关键术语对照表；高风险句子的直译、意译与选择理由；将译文回译后的含义差异清单。</pre>
+                <div class="tip"><b>使用提醒</b><span>翻译后重点核对否定词、比较对象、时态、统计术语和因果动词。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details></div>
+        </section><section class="chapter" id="chapter-08">
+          <div class="chapter-heading"><span>08</span><div><h2>模拟审稿、修稿与回复审稿人</h2><p>4 条可复制模板</p></div></div>
+          <div class="prompt-list"><details class="prompt-card" id="prompt-25" data-search="模拟目标期刊的严格审稿 每条意见必须可定位、可解释、可修改 帮我看看论文有什么问题 请以【目标期刊/学科】审稿人的标准评估以下论文，仅评价原文提供的内容，不预测录用概率。
+
+论文内容：【粘贴或上传】
+文章类型与期刊要求：【填写】
+
+检查：研究问题与贡献、文献支撑、理论逻辑、研究设计、样本与测量、分析方法、结果报告、解释边界、图表、透明度、伦理和可重复性。
+
+先给总体评价，再分重大问题和次要问题。每条意见必须包含：具体位置、存在的问题、为什么影响可信度或贡献、需要的证据、可执行修改方案、修改优先级。信息不足时写“原文未报告”，不要假定作者做过未呈现的分析。
+
+最后列出“必须解决 / 建议解决 / 文字层面”三档修订清单。 好的模拟审稿不是挑错数量多，而是能指出影响结论的关键链条。">
+              <summary><span class="prompt-num">25</span><span class="prompt-title">模拟目标期刊的严格审稿</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>每条意见必须可定位、可解释、可修改</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我看看论文有什么问题</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-25" type="button">复制提示词</button></div>
+                <pre id="text-25">请以【目标期刊/学科】审稿人的标准评估以下论文，仅评价原文提供的内容，不预测录用概率。
+
+论文内容：【粘贴或上传】
+文章类型与期刊要求：【填写】
+
+检查：研究问题与贡献、文献支撑、理论逻辑、研究设计、样本与测量、分析方法、结果报告、解释边界、图表、透明度、伦理和可重复性。
+
+先给总体评价，再分重大问题和次要问题。每条意见必须包含：具体位置、存在的问题、为什么影响可信度或贡献、需要的证据、可执行修改方案、修改优先级。信息不足时写“原文未报告”，不要假定作者做过未呈现的分析。
+
+最后列出“必须解决 / 建议解决 / 文字层面”三档修订清单。</pre>
+                <div class="tip"><b>使用提醒</b><span>好的模拟审稿不是挑错数量多，而是能指出影响结论的关键链条。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-26" data-search="生成逐点回复审稿人草稿 区分已修改、部分接受和有证据的不同意 帮我回复审稿意见 你是一名学术修回信编辑。请根据审稿意见、作者立场和实际修改生成逐点回复草稿，不虚构已完成的分析或修改。
+
+审稿意见：【逐条编号粘贴】
+作者立场与证据：【填写】
+实际修改内容及页码行号：【填写】
+
+每条回复使用以下结构：
+1. 完整引用审稿意见。
+2. 简洁感谢并复述核心关切。
+3. 明确回答：接受 / 部分接受 / 礼貌不同意。
+4. 说明采取的分析或修改及其依据。
+5. 给出修订稿中的页码、行号和修改后原文。
+6. 若无法修改，解释限制、补充证据和降低结论强度的处理。
+
+语气专业、直接，不回避问题，不声称完成未完成的工作。最后生成“意见—行动—证据—位置—状态”追踪表。 只有真实完成的修改才能写入回复信；页码和行号需在最终排版后更新。">
+              <summary><span class="prompt-num">26</span><span class="prompt-title">生成逐点回复审稿人草稿</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>区分已修改、部分接受和有证据的不同意</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我回复审稿意见</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-26" type="button">复制提示词</button></div>
+                <pre id="text-26">你是一名学术修回信编辑。请根据审稿意见、作者立场和实际修改生成逐点回复草稿，不虚构已完成的分析或修改。
+
+审稿意见：【逐条编号粘贴】
+作者立场与证据：【填写】
+实际修改内容及页码行号：【填写】
+
+每条回复使用以下结构：
+1. 完整引用审稿意见。
+2. 简洁感谢并复述核心关切。
+3. 明确回答：接受 / 部分接受 / 礼貌不同意。
+4. 说明采取的分析或修改及其依据。
+5. 给出修订稿中的页码、行号和修改后原文。
+6. 若无法修改，解释限制、补充证据和降低结论强度的处理。
+
+语气专业、直接，不回避问题，不声称完成未完成的工作。最后生成“意见—行动—证据—位置—状态”追踪表。</pre>
+                <div class="tip"><b>使用提醒</b><span>只有真实完成的修改才能写入回复信；页码和行号需在最终排版后更新。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-27" data-search="修回前一致性与完整性审计 核对稿件、回复信、图表和补充材料是否同步 检查一下我是不是都改完了 请对修订稿、回复信和修改清单进行一致性审计。
+
+原稿关键主张：【粘贴】
+修订稿：【粘贴或上传】
+回复审稿人文件：【粘贴或上传】
+修改追踪表：【粘贴】
+
+检查：每条意见是否有回复；声称的修改是否真实出现在稿件；页码行号是否正确；摘要、正文、图表、补充材料和结论中的数字是否一致；术语、样本量和分析名称是否统一；新增分析是否同步更新方法、结果、讨论与局限；删除内容是否仍被其他段落引用。
+
+输出阻断提交的问题、重要但非阻断问题和格式问题。每项给出文件位置、矛盾内容、建议修复和复核方法。不得把未核实项标为已完成。 修回最常见的风险是局部修改后，摘要、图表或回复信没有同步。">
+              <summary><span class="prompt-num">27</span><span class="prompt-title">修回前一致性与完整性审计</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>核对稿件、回复信、图表和补充材料是否同步</span></div>
+                <div class="bad-row"><b>我不说</b><span>检查一下我是不是都改完了</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-27" type="button">复制提示词</button></div>
+                <pre id="text-27">请对修订稿、回复信和修改清单进行一致性审计。
+
+原稿关键主张：【粘贴】
+修订稿：【粘贴或上传】
+回复审稿人文件：【粘贴或上传】
+修改追踪表：【粘贴】
+
+检查：每条意见是否有回复；声称的修改是否真实出现在稿件；页码行号是否正确；摘要、正文、图表、补充材料和结论中的数字是否一致；术语、样本量和分析名称是否统一；新增分析是否同步更新方法、结果、讨论与局限；删除内容是否仍被其他段落引用。
+
+输出阻断提交的问题、重要但非阻断问题和格式问题。每项给出文件位置、矛盾内容、建议修复和复核方法。不得把未核实项标为已完成。</pre>
+                <div class="tip"><b>使用提醒</b><span>修回最常见的风险是局部修改后，摘要、图表或回复信没有同步。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details><details class="prompt-card" id="prompt-28" data-search="撰写投稿附信并校准贡献表达 用可核验信息说明匹配度和贡献 帮我写一封投稿信 请根据以下材料撰写投稿附信，不虚构编辑姓名、期刊政策、原创性声明或研究影响。
+
+论文题目与摘要：【粘贴】
+目标期刊及已核验范围：【填写】
+主要贡献与证据：【填写】
+合规声明信息：【原创性/重复投稿/利益冲突/伦理审批/数据代码可用性，按实际填写】
+
+附信应包括：投稿目的；研究问题及其重要性；2-3项有证据支持的贡献；与期刊范围的具体匹配；文章类型；真实准确的合规声明；通讯作者信息占位符。
+
+避免“首次”“突破性”“填补巨大空白”等未经验证的宣传措辞。无法确认的期刊要求标注“请核对期刊官网”，不得自行补写。 投稿附信必须与稿件和期刊实际要求一致，不能替代研究贡献本身。">
+              <summary><span class="prompt-num">28</span><span class="prompt-title">撰写投稿附信并校准贡献表达</span><span class="chevron">⌄</span></summary>
+              <div class="prompt-body">
+                <div class="use-row"><b>适用场景</b><span>用可核验信息说明匹配度和贡献</span></div>
+                <div class="bad-row"><b>我不说</b><span>帮我写一封投稿信</span></div>
+                <div class="prompt-head"><b>我会说（直接复制）</b><button class="copy-btn" data-target="text-28" type="button">复制提示词</button></div>
+                <pre id="text-28">请根据以下材料撰写投稿附信，不虚构编辑姓名、期刊政策、原创性声明或研究影响。
+
+论文题目与摘要：【粘贴】
+目标期刊及已核验范围：【填写】
+主要贡献与证据：【填写】
+合规声明信息：【原创性/重复投稿/利益冲突/伦理审批/数据代码可用性，按实际填写】
+
+附信应包括：投稿目的；研究问题及其重要性；2-3项有证据支持的贡献；与期刊范围的具体匹配；文章类型；真实准确的合规声明；通讯作者信息占位符。
+
+避免“首次”“突破性”“填补巨大空白”等未经验证的宣传措辞。无法确认的期刊要求标注“请核对期刊官网”，不得自行补写。</pre>
+                <div class="tip"><b>使用提醒</b><span>投稿附信必须与稿件和期刊实际要求一致，不能替代研究贡献本身。</span></div>
+                <div class="source">整理：江枫读博日记｜抖音号：24256428</div>
+              </div>
+            </details></div>
+        </section><div class="empty" id="empty">没有找到匹配的提示词，请更换关键词。</div></article></div>
+  </main>
+  <button class="back-top" id="backTop" type="button" aria-label="返回顶部">↑</button>
+  <footer><b>江枫读博日记 · 抖音号 24256428</b><p>欢迎分享学习，请勿删除账号信息后重新分发。</p><p>AI 输出不能替代原文核验、统计判断与学术责任。</p></footer>
+  <script>
+    const copyText=async text=>{try{await navigator.clipboard.writeText(text)}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}};
+    document.addEventListener('click',async e=>{const b=e.target.closest('.copy-btn');if(!b)return;const el=document.getElementById(b.dataset.target);await copyText(el.innerText);const old=b.textContent;b.textContent='已复制';setTimeout(()=>b.textContent=old,1400)});
+    document.getElementById('shareBtn').addEventListener('click',async()=>{const data={title:document.title,text:'科研AI高质量提示词手册：28个可复制模板',url:location.href};if(navigator.share){try{await navigator.share(data)}catch(e){}}else{await copyText(location.href);const b=document.getElementById('shareBtn');b.textContent='链接已复制';setTimeout(()=>b.textContent='分享链接',1400)}});
+    document.getElementById('backTop').addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+    const search=document.getElementById('search'),cards=[...document.querySelectorAll('.prompt-card')],chapters=[...document.querySelectorAll('.chapter')],empty=document.getElementById('empty');
+    search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let visible=0;cards.forEach(c=>{const ok=!q||c.dataset.search.includes(q);c.hidden=!ok;if(ok&&q)c.open=true;if(ok)visible++});chapters.forEach(ch=>ch.hidden=![...ch.querySelectorAll('.prompt-card')].some(c=>!c.hidden));empty.style.display=visible?'none':'block'});
+    addEventListener('hashchange',()=>{const el=document.querySelector(location.hash);if(el?.classList.contains('prompt-card'))el.open=true});if(location.hash){const el=document.querySelector(location.hash);if(el?.classList.contains('prompt-card'))el.open=true}
+  </script>
+</body>
+</html>
